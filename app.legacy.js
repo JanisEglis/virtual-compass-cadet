@@ -6315,17 +6315,5 @@ body.print-mode #printNorthTR .n{
     document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', ensureFab, {
       once: true
     }) : ensureFab();
-
-    // Klaviatūra (sākšana/navigācija)
-    document.addEventListener('keydown', e => {
-      if (e.key === 'i' || e.key === 'I') {
-        e.preventDefault();
-        start();
-      }
-      if (!running) return;
-      if (e.key === 'Escape') stop();
-      if (e.key === 'ArrowRight') next();
-      if (e.key === 'ArrowLeft') prev();
-    });
   })();
 } // Boot guard end
